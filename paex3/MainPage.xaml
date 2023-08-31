@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="paex3.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="codigo" Grid.Row="0" Grid.Column="0"></Label>
+                    <Label Text="nombre" Grid.Row="0" Grid.Column="1"></Label>
+                    <Label Text="apellido" Grid.Row="0" Grid.Column="2"></Label>
+                    <Label Text="edad" Grid.Row="0" Grid.Column="3"></Label>
+
+
+                </Grid>
+            </Frame>
+            <Frame>
+                <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0"></Label>
+                                        <Label Text="{Binding nombre}" Grid.Row="0" Grid.Column="1"></Label>
+                                        <Label Text="{Binding apellido}" Grid.Row="0" Grid.Column="2"></Label>
+                                        <Label Text="{Binding edad}" Grid.Row="0" Grid.Column="3"></Label>
+
+
+                                    </Grid>
+
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                
+            </Frame>
+
+            <Frame>
+                <Button x:Name="btnInsertar" Text="Insertar" Clicked="btnInsertar_Clicked"></Button>
+            </Frame>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

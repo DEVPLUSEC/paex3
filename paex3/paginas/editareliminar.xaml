@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="paex3.paginas.editareliminar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registrar estudiante" FontSize="24" HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtCodigo" Placeholder="Id"></Entry>
+            <Entry x:Name="txtNombre" Placeholder="Nombre"></Entry>
+            <Entry x:Name="txtApellido" Placeholder="Apellido"></Entry>
+            <Entry x:Name="txtEdad" Placeholder="Edad"></Entry>
+
+            <Button x:Name="btnActualizar" Text="Actualizar" BackgroundColor="Green" Clicked="btnActualizar_Clicked"></Button>
+            <Button x:Name="btnEliminar" Text="Eliminar" Background="red" Clicked="btnEliminar_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
