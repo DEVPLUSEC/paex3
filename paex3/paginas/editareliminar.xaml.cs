@@ -43,7 +43,7 @@ namespace paex3.paginas
 
                 Navigation.PushAsync(new MainPage());
                 DisplayAlert("Usuario Actualizado", "", "Cerrar");
-
+                   
 
 
 
